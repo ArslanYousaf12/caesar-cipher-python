@@ -1,5 +1,10 @@
+import math
 #Write your code below this line 👇
-
+def paint_calc(height, width, cover):
+    numberOfCans = (height * width) / cover
+    # numberOfCans = round(numberOfCans)
+    numberOfCans = math.ceil(numberOfCans)
+    print(f"you will need {numberOfCans} number of cans")
 
 
 
