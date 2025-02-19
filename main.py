@@ -5,8 +5,16 @@ text = input("Type your message:\n").lower()
 shift = int(input("Type the shift number:\n"))
 
 #TODO-1: Create a function called 'encrypt' that takes the 'text' and 'shift' as inputs.
-
-    #TODO-2: Inside the 'encrypt' function, shift each letter of the 'text' forwards in the alphabet by the shift amount and print the encrypted text.  
+def encrypt(text, shift):
+    #TODO-2: Inside the 'encrypt' function, shift each letter of the 'text'
+    #  forwards in the alphabet by the shift amount and print the encrypted text. 
+    encrypted_text = ""
+    for num in range(0, len(text)):
+        indexLetter =alphabet.index(text[num]) + shift
+        encrypted_text += alphabet[indexLetter]
+    print(f"Encode text is { encrypted_text}")
+        
+        
     #e.g. 
     #plain_text = "hello"
     #shift = 5
@@ -18,4 +26,6 @@ shift = int(input("Type the shift number:\n"))
 
     ##🐛Bug alert: What happens if you try to encode the word 'civilization'?🐛
 
-#TODO-3: Call the encrypt function and pass in the user inputs. You should be able to test the code and encrypt a message. 
+#TODO-3: Call the encrypt function and pass in the user inputs.
+#  You should be able to test the code and encrypt a message. 
+encrypt(text=text, shift=shift)
