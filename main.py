@@ -7,12 +7,12 @@ shift = int(input("Type the shift number:\n"))
 #TODO-1: Combine the encrypt() and decrypt() functions into a single function called caesar(). 
 def caesar(text, shift, direction):
   converted_text = ""
+  if direction == "decode":
+        shift *= -1
   for letter in text:
       position = alphabet.index(letter)
-      if direction == "encode":
-        new_position = position + shift
-      else:
-        new_position = position  - shift
+      
+      new_position = position  + shift
       converted_text += alphabet[new_position]
   print(f"The Converted test is {converted_text}")
 # def encrypt(plain_text, shift_amount):
